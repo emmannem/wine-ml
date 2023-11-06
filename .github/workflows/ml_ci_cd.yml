@@ -18,7 +18,7 @@ jobs:
     - name: install python requirements
       run: pip install -r requirements.txt
     - name: download dataset
-      run: wget -O data/WineQT.csv ${{github.event.client_payload.dataseturl}}
+      run: wget -O data/WineQT.csv "${{github.event.client_payload.dataseturl}}"
     - name: cat dataset
       run: cat data/WineQT.csv
 
