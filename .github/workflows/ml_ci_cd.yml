@@ -64,5 +64,5 @@ jobs:
         KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
       with:
           namespace: ${{secrets.OKTETO_NAMESPACE }}
-          manifest: manifests/k8.yaml
+          manifest: manifests/k8.yml
           tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:${{github.event.client_payload.sha}}
